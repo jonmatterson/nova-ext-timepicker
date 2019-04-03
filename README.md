@@ -2,6 +2,24 @@
 
 This extension provides a helper for adding timepickers (using the [jQuery Timepicker plugin](https://timepicker.co/)) to input elements collecting time values. It is intended as a utility for extension writers, skin designers and sim manager comfortable with modifying Nova's view files, and it does not provide any changes to Nova on its own.
 
+## Requirements
+
+This extension requires:
+
+- Nova 2.6+
+
+## Installation
+
+Copy the entire directory into `applications/extensions/timepicker`.
+
+Add the following to `application/config/extensions.php`:
+
+```
+$config['extensions']['enabled'][] = 'timepicker';
+```
+
+## Usage
+
 The simplest way to enable a timepicker is simply to add `data-timepicker` as an attribute on an element. This will initialize a jQuery.timepicker with no options.
 
 To pass options, simply JSON-encode them (with escaped quotes) as the value of `data-timepicker` such as:
@@ -28,18 +46,12 @@ array(
 );
 ```
 
-## Requirements
+## Issues
 
-This extension requires:
+If you encounter a bug or have a feature request, please report it on GitHub in the issue tracker here: https://github.com/jonmatterson/nova-ext-timepicker/issues
 
-- Nova 2.6+
+## License
 
-## Installation
+Copyright (c) 2018-2019 Jon Matterson.
 
-Copy the entire directory into `applications/extensions/timepicker`.
-
-Add the following to `application/config/extensions.php`:
-
-```
-$config['extensions']['enabled'][] = 'timepicker';
-```
+This module is open-source software licensed under the **MIT License**. The full text of the license may be found in the `LICENSE` file.
